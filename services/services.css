@@ -1,0 +1,102 @@
+body {
+    display: grid;
+    grid-template-rows: 4rem 4rem auto 4rem;
+    width: 100%;
+    /*background: rgb(58, 58, 58);*/
+}
+.form-section {
+    grid-row: 2/3;
+}
+#footer-section {
+    grid-row: 4/-1;
+    margin-top: auto;  
+}
+#service {
+    grid-row: 3/4;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 2rem auto auto 2rem;
+    margin: 0 3rem;
+    column-gap: 2rem;
+}
+#service .service-parts {
+    grid-row: 2/4;
+    display: flex;
+    flex-flow: column wrap;
+    gap: 1.3rem;
+}
+#service .service-form {
+    grid-row: 2/3;
+    background: #003849;
+    font-family: "Montserrat",sans-serif;
+    color: #fff;
+    display: flex;
+    flex-flow: column wrap;
+    gap: 1.5rem;
+    padding: 2rem 1.5rem 2rem 1rem;
+}
+.service-cards {
+    display: flex;
+    flex-flow: wrap column;
+    gap: 0.8rem;
+}
+.service-card {
+    background: #ddd;
+    padding: 2rem 1rem;
+    font-family: "Montserrat",sans-serif;
+}
+.service-name,.service-describe {
+    margin-bottom: 1.5rem;
+}
+
+/*
+.service-form .service-form-field{
+    display: flex;
+    flex-flow: column wrap;
+    gap: 0.5rem;
+}*/
+
+.service-form-field .field {
+    display: flex;
+    flex-flow: column wrap;
+    padding-bottom: 0.5rem;
+}
+.service-form-field .field input,textarea {
+    padding-top:0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem; 
+}
+.service-form-field .field input[placeholder],textarea {
+    font-family: "Montserrat",sans-serif;
+    color: #ccc;
+}
+.service-form-field .btn[type="submit"] {
+    padding: 1.3rem 1.8rem;
+}
+
+@media (max-width:36rem) {
+    body {
+        grid-template-rows: 4rem auto auto 4rem;
+    }
+    #service {
+        grid-template-columns: 2rem auto 2rem;
+        grid-template-rows: 2rem 1fr auto 2rem;
+        gap: 1rem;
+        justify-items: center;
+        margin: 0;
+    }
+    #service .service-parts {
+        grid-row: 2/3;
+        grid-column: 2/3;
+    }
+    #service .service-form {
+        grid-row: 3/4;
+        grid-column: 2/3;
+    }
+    .service-cards {
+        display: grid;
+        grid-template-columns: auto;
+        gap: 1.5rem;
+        justify-items: center;
+    }
+}
